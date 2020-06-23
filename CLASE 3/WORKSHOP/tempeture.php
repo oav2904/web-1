@@ -5,7 +5,7 @@ $tempeture = array(78, 60, 62, 68, 71, 68, 73, 85, 66, 64, 76, 63, 75, 76, 73, 6
 
 $average = array_sum($tempeture) / count($tempeture);
 sort($tempeture);
-$short = array_unique(array_slice($tempeture, 0, 9));
+$short = array_unique(array_slice($tempeture, 0, 7));
 rsort($tempeture);
 $large = array_unique(array_slice($tempeture, 0, 7));
 
