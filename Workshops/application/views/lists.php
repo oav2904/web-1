@@ -1,0 +1,28 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');?>
+                <div class='col-md-12 right_col'>
+                    <div id='information'></div>
+                    <table class='table table-bordered table-responsive' id='tableEditoriales'>
+                        <thead>
+                            <tr>
+                                <th scope='col'></th>
+                                <th scope='col'>Id</th>
+                                <th scope='col'>Nombre</th>
+                                <th scope='col'>Apellido</th>
+                                <th scope='col'>Usuario</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php foreach ($users as $user):?>
+                                <tr>
+                                    <td></td>
+                                    <td><?php echo $user['id'];?></td>
+                                    <td><?php echo $user['firtsname'];?></td>
+                                    <td><?php echo $user['lastname'];?></td>
+                                    <td><?php echo $user['username'];?></td>
+
+                                    </tr>
+                            <?php endforeach;?>
+                        </tbody>
+                    </table>
+                </div>
