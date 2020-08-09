@@ -13,11 +13,22 @@ class User_model extends CI_Model {
             'username'   => $this->input->post('username'),
             'pass'   => $this->input->post('pass'),
         );
-        return $this->db->insert('editoriales', $data);
+        return $this->db->insert('users', $data);
     }
     public function all(){
         $query = $this->db->get('users');
         return $query->result();
+    }
+    public function update($id)
+    {
+        $data = array(
+            'firtsname'   => $this->input->post('firtsname'),
+            'lastname'   => $this->input->post('lastname'),
+            'username'   => $this->input->post('username'),
+            'pass'   => $this->input->post('pass'),
+        );
+        $this->db->where('id',$id);
+        return $this->db->update('users', $data);
     }
 
 
